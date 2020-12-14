@@ -33,10 +33,11 @@
     "prettier/prettier": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
-    "@typescript-eslint/ban-types": "off",
     "react/jsx-props-no-spreading": "off",
-    "no-use-before-define": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/ban-types": "off",
     "import/prefer-default-export": "off",
     "import/extensions": [
       "error",
