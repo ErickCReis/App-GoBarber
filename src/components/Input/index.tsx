@@ -30,7 +30,7 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
 ) => {
   const inputElementRef = useRef<TextInputRN>(null);
 
-  const { registerField, defaultValue = '', fieldName } = useField(name);
+  const { registerField, defaultValue = '', fieldName, error } = useField(name);
   const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
 
   const [isFoucused, setIsFoucused] = useState(false);
@@ -68,7 +68,7 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
   }, [fieldName, registerField]);
 
   return (
-    <Container isFoucused={isFoucused}>
+    <Container isFoucused={isFoucused} isErrored={!!error}>
       <Icon
         name={icon}
         size={20}
